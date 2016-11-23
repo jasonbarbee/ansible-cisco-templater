@@ -29,8 +29,10 @@ Other platforms, apt-get install ansible, npm install ansible, etc...
 Edit inventory file for your environment variables.
 
   '''ansible-playbook template-routers.yml
+  '''
 or
   '''ansible-playbook template-switches.yml
+  '''
 
 Generates template files in "config" folder.
 
