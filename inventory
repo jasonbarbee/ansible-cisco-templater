@@ -1,12 +1,12 @@
 [all:vars]
-ccm01=192.168.201.10
-ccm02=192.168.201.11
-domain=baldwin911.org
+ccm01=192.168.1.X
+ccm02=192.168.1.X
+domain=mydomain.org
 admin_user=admin
 admin_password=secretsauce
 enable_password=secretsauce
 netmask=255.255.255.0
-gateway=192.168.201.1
+gateway=192.168.1.1
 ntp_server=pool.ntp.org
 name_server1=8.8.8.8
 name_server2=4.2.2.2
