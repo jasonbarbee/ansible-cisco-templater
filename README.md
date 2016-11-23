@@ -15,11 +15,11 @@ Then in the babun shell run this to jumpstart the ansible bootstrap.
 curl -s https://raw.githubusercontent.com/tiangolo/ansible-babun-bootstrap/master/install.sh | source /dev/stdin
 
 ###Then install some other dependancies.
-**run these in Babun:
-*pact install python-yaml
-*pact install python-setuptools python-ming
-*pact install libxml2-devel libxslt-devel libyaml-devel
-*pact install python-jinja2
+####Run these in Babun:
+* pact install python-yaml
+* pact install python-setuptools python-ming
+* pact install libxml2-devel libxslt-devel libyaml-devel
+* pact install python-jinja2
 
 I think that's all you need.
 
