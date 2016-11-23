@@ -1,0 +1,26 @@
+[all:vars]
+ccm01=192.168.201.10
+ccm02=192.168.201.11
+domain=baldwin911.org
+admin_user=admin
+admin_password=secretsauce
+enable_password=secretsauce
+netmask=255.255.255.0
+gateway=192.168.201.1
+ntp_server=pool.ntp.org
+name_server1=8.8.8.8
+name_server2=4.2.2.2
+
+[ROUTERS:vars]
+interface=gi0/0
+
+[ROUTERS]
+Router1 ipaddress=192.168.1.2
+Router2 ipaddress=192.168.1.3
+
+[SWITCHES:vars]
+interface=vlan1
+
+[SWITCHES]
+Switch1 ipaddress=192.168.1.4
+Switch2 ipaddress=192.168.1.5

@@ -1,0 +1,39 @@
+!Remove the defaults
+no username cisco
+no banner login
+no banner exec
+no ip dhcp excluded-address 10.10.10.1
+no ip dhcp pool ccp-pool
+int gi0/0
+no ip address
+no ip http server
+no ip http access-class 23
+no ip http secure-server
+no access-list 23 permit 10.10.10.0 0.0.0.127
+line vty 0 15
+no access-class 23 in
+
+!Turn on best practices
+service password-encryption
+
+!Setup the Device
+enable secret {{enable_password}}
+hostname {{inventory_hostname}}
+ip domain name {{domain}}
+aaa new-model
+username {{admin_user}} secret {{admin_password}}
+line vty 0 15
+logging synchronous
+transport input telnet ssh
+privilege level 15
+ntp server {{ntp_server}}
+
+!Setup a basic Interface
+interface {{interface}}
+ip address {{ipaddress}} {{netmask}}
+no shut
+exit
+
+!Default Gateway
+ip route 0.0.0.0 0.0.0.0 {{gateway}}
+ip defaulte-gateway {{gateway}}

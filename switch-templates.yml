@@ -1,0 +1,11 @@
+---
+  - name: Build Router Templates
+    hosts: SWITCHES
+    connection: local
+    gather_facts: no
+
+    tasks:
+      - name: Build configs
+        template:
+          src=templates/switches.j2
+          dest=configs/{{inventory_hostname}}.conf

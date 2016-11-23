@@ -1,0 +1,11 @@
+---
+  - name: Build Router Templates
+    hosts: ROUTERS
+    connection: local
+    gather_facts: no
+
+    tasks:
+      - name: Build Router configs
+        template:
+          src=templates/routers.j2
+          dest=configs/{{inventory_hostname}}.conf
