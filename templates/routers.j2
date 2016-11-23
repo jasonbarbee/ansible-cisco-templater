@@ -50,14 +50,21 @@ voice service voip
  ip address trusted list
   ipv4 {{ccm01}}
   ipv4 {{ccm02}}
+
+sip-ua
+  retry invite 2
+  timers trying 150
+
 dial-peer voice 100 voip
 session target ipv4:{{ccm01}}
+voice-class sip options-keepalive
 session protocol sip
 codec g711ulaw
 destination-pattern ....
 
 dial-peer voice 101 voip
 session target ipv4:{{ccm02}}
+voice-class sip options-keepalive
 session protocol sip
 codec g711ulaw
 destination-pattern ....
