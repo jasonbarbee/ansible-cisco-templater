@@ -1,16 +1,33 @@
 # ansible-cisco-templater
-Basic Cisco Template Config Example in Ansible
+##Basic Cisco Template Config Example in Ansible
+
+This is a basic example of IOS switches and routers.
 
 Clean up all the default off Cisco routers, and apply a clean standard config easily. I use this when preparing larger network rollouts.
 
-Edit inventory file for your environment variables.
-This is a basic example of IOS switches and routers.
+##Install Ansible
+The best way on Windows is Babun
+http://babun.github.io
 
-Example Usage
-ansible-playbook template-routers.yml
+Download the installer from the Babun site, then this is a quick start to get ansible up and running.
+curl -s https://raw.githubusercontent.com/tiangolo/ansible-babun-bootstrap/master/install.sh | source /dev/stdin
+
+pact install python-yaml
+pact install python-setuptools python-ming
+pact install libxml2-devel libxslt-devel libyaml-devel
+pact install python-jinja2
+
+I think that's all you need.
+
+Other platforms, apt-get install ansible, npm install ansible, etc...
+
+##Example Usage
+Edit inventory file for your environment variables.
+
+  ansible-playbook template-routers.yml
 or
-ansible-playbook template-switches.yml
+  ansible-playbook template-switches.yml
 
 Generates template files in "config" folder.
 
-License: GPL
+###License: GPL
