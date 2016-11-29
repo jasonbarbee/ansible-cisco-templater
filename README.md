@@ -12,16 +12,16 @@ http://babun.github.io
 Download the installer from the Babun site, then this is a quick start to get ansible up and running.
 Then in the babun shell run this to jumpstart the ansible bootstrap.
 
+Run this inside the new Babun Shell
 curl -s https://raw.githubusercontent.com/tiangolo/ansible-babun-bootstrap/master/install.sh | source /dev/stdin
 
 ###Then install some other dependancies.
-####Run these in Babun:
+####Run these in Babun: (you can copy paste the whole block)
 * pact install python-yaml
 * pact install python-setuptools python-ming
 * pact install libxml2-devel libxslt-devel libyaml-devel
 * pact install python-jinja2
 
-I think that's all you need.
 
 Other platforms, apt-get install ansible, npm install ansible, etc...
 
